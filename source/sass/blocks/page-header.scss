@@ -1,0 +1,47 @@
+.page-header {
+  background-color: $base-white;
+
+  &__layout {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  &__logo:hover,
+  &__logo:focus {
+    opacity: 0.7;
+  }
+
+  &__header {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .page-header {
+    &__layout {
+      align-items: center;
+    }
+
+    &__logo {
+    width: 82px;
+    height: 36px;
+    }
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .page-header {
+    &__logo {
+    width: 170px;
+    height: 36px;
+    }
+
+    &__header {
+      display: block;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  }
+}
