@@ -21,4 +21,34 @@
     color: $base-primary;
     opacity: 0.8;
   }
+
+  &__text {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .user-list {
+    padding-right: 22px;
+
+    &__item:not(:last-child) {
+      margin-right: 44px;
+    }
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .user-list {
+    &__text {
+      display: block;
+    }
+
+    &__link {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
