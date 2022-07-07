@@ -1,0 +1,17 @@
+@media (min-width: $tablet-size) {
+  .slider {
+    &__slide-image {
+      width: 476px;
+      height: 476px;
+    }
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .slider {
+    &__slide-image {
+      width: 600px;
+      height: 600px;
+    }
+  }
+}
