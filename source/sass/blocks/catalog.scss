@@ -1,0 +1,13 @@
+.catalog {
+  background-color: $lightest-grey;
+
+  &__button {
+    font-size: 14px;
+    line-height: 20px;
+    background-image: url("../../img/basket-on-button.png");
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+    background-size: 20px 16px;
+    padding: 8px 20px 8px 46px;
+  }
+}

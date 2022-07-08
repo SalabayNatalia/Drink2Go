@@ -1,0 +1,39 @@
+.pagination {
+  &__list {
+    @include list-reset;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    font-size: 16px;
+    line-height: 24px;
+    color: $base-primary;
+    width: 40px;
+    height: 40px;
+    background-color: $base-white;
+    border-radius:4px;
+    border-color: transparent;
+  }
+
+  &__button--next {
+    box-sizing: border-box;
+    background: center center no-repeat url("../../img/arrow.svg") $base-white;
+  }
+
+  &__button--back {
+    box-sizing: border-box;
+    background: center center no-repeat url("../../img/arrow.svg") $base-white;
+    transform: rotate(-180deg);
+  }
+
+  &__button--сurrent {
+    color: $base-black;
+    background-color: transparent;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    opacity: 0.3;
+  }
+}

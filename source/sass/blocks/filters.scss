@@ -1,0 +1,107 @@
+.filters {
+  &__button {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $base-primary;
+    padding: 8px 0;
+    width: 100%;
+    background-color: $base-white;
+    border-radius: 4px;
+    border-color: transparent;
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__filter {
+    border:none;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  &__radio-input,
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  &__radio {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 0 2px $base-grey;
+    border-radius: 50%;
+    background-color: $base-white;
+  }
+
+  &__radio-input:checked + &__radio {
+    background-image: url("../../img/radio.svg");
+    box-shadow: 0 0 0 2px $base-primary;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // &__input-radio:checked:hover + &__radio {
+  //   box-shadow: 0 0 0 1px $grey-style;
+  // }
+
+  &__radio-input:hover + &__radio,
+  &__radio-input:focus + &__radio {
+    box-shadow: 0 0 0 1px $light-grey;
+  }
+
+  &__radio-input:checked:disabled + &__radio {
+    opacity: 0.3;
+  }
+
+  &__radio-input:disabled + &__radio {
+    box-shadow: 0 0 0 2px $light-grey;
+    background-color: $light-grey;
+    color: $base-grey;
+  }
+
+  &__check-box {
+    position: absolute;
+    width: 42px;
+    height: 24px;
+    box-shadow: 0 0 0 2px $base-grey;
+    border-radius: 12px;
+    background-color: $base-grey;
+    background-image: url("../../img/check.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  &__input:checked + &__check-box {
+    box-shadow: 0 0 0 2px $base-primary;
+    background-color: $base-primary;
+    background-position: right;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .filters {
+    &__button {
+      width: auto;
+      padding-left: 39px;
+      padding-right: 39px;
+      text-align: center;
+    }
+  }
+}
+

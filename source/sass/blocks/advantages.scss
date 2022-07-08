@@ -1,0 +1,31 @@
+.advantages {
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.advantages__item--cheerfulness::before {
+  @include advantages-item-before;
+  width: 48px;
+  background-image: url("../../img/cheerfulness.png");
+}
+
+.advantages__item--convenience::before {
+  @include advantages-item-before;
+  width: 38px;
+  background-image: url("../../img/convenience.png");
+}
+
+.advantages__item--speed::before {
+  @include advantages-item-before;
+  width: 46px;
+  background-image: url("../../img/speed.png");
+}
+
+.advantages__item--eco::before {
+  @include advantages-item-before;
+  width: 42px;
+  background-image: url("../../img/eco.png");
+}
