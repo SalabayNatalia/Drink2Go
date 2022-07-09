@@ -1,7 +1,7 @@
 .user-list {
   @include list-reset;
   display: flex;
-  align-items: center;
+  // align-items: center;
 
   &__item {
     font-size: 12px;
@@ -14,12 +14,23 @@
     text-decoration: none;
     display: block;
     color: $base-black;
+    padding: 32px 22px;
+    background-color: $base-white;
   }
 
   &__link:hover,
   &__link:focus {
     color: $base-primary;
-    opacity: 0.8;
+  }
+
+  &__link:active {
+    background-color: $base-secondary;
+    color: $base-black;
+  }
+
+  &__icon {
+    stroke: currentColor;
+    fill-rule: $base-primary;
   }
 
   &__text {
@@ -34,6 +45,11 @@
     &__item:not(:last-child) {
       margin-right: 44px;
     }
+
+    &__link {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
 }
 
@@ -45,6 +61,10 @@
 
     &__link {
       display: flex;
+    }
+
+    &__link:active {
+      color: $base-primary;
     }
 
     &__item:not(:last-child) {
