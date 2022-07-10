@@ -35,7 +35,8 @@
     border-radius: 4px;
   }
 
-  &__social-link:hover {
+  &__social-link:hover,
+  &__social-link:focus {
     background-color: $base-secondary;
     fill: $base-primary;
   }
@@ -48,17 +49,21 @@
     fill: $base-grey;
   }
 
-  &__social-icon:hover {
+  &__social-icon:hover,
+  &__social-icon:focus {
     fill: $base-primary;
   }
 
-  &__address {
+  &__adress {
     display: block;
     color: $base-black;
     text-decoration: none;
     font-size: 14px;
     line-height: 20px;
     padding-left: 19px;
+    background: left top no-repeat url("../../img/union.svg");
+    margin-bottom: 16px;
+    margin-top: 20px;
   }
 
   &__phone {
@@ -68,28 +73,20 @@
     font-size: 14px;
     line-height: 20px;
     padding-left: 19px;
+    background: left top no-repeat url("../../img/phone.svg");
   }
-}
 
-.footer__phone:hover {
-  color: $primary-lighter;
-}
-.footer__address:focus {
-  color: $primary-lighter;
-}
+  &__phone:hover,
+  &__phone:focus,
+  &__adress:hover,
+  &__adress:focus {
+    color: $primary-lighter;
+  }
 
-.footer__address:active {
-  color: $primary-darker;
-}
-
-.footer__address {
-  background: left top no-repeat url("../../img/union.svg");
-  margin-bottom: 16px;
-  margin-top: 20px;
-}
-
-.footer__phone {
-  background: left top no-repeat url("../../img/phone.svg");
+  &__adress:active,
+  &__phone:active {
+    color: $primary-darker;
+  }
 }
 
 @media (min-width: $tablet-size) {
