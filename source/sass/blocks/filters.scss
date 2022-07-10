@@ -11,6 +11,22 @@
     border-color: transparent;
   }
 
+  &__button:hover,
+  &__button:focus {
+    background-color: $primary-lighter;
+    color: $base-white
+  }
+
+  &__button:active {
+    background-color: $primary-darker;
+    color: $base-white
+  }
+
+  &__button:disabled {
+    background-color: $light-grey;
+    color: $base-white
+  }
+
   &__list {
     @include list-reset;
   }

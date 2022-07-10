@@ -1,0 +1,25 @@
+.copyright {
+  &__link-logo {
+    fill: $base-grey;
+  }
+
+  &__link-logo:hover {
+    fill: $primary-lighter;
+  }
+
+  &__link-text {
+    color: $base-grey;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  &__link-text:hover,
+  &__link-text:focus {
+    color: $base-primary;
+  }
+
+  &__link-text:active {
+    color: $primary-darker;
+  }
+}

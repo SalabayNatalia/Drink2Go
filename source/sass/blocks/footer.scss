@@ -51,6 +51,45 @@
   &__social-icon:hover {
     fill: $base-primary;
   }
+
+  &__address {
+    display: block;
+    color: $base-black;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 19px;
+  }
+
+  &__phone {
+    display: block;
+    color: $base-black;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 19px;
+  }
+}
+
+.footer__phone:hover {
+  color: $primary-lighter;
+}
+.footer__address:focus {
+  color: $primary-lighter;
+}
+
+.footer__address:active {
+  color: $primary-darker;
+}
+
+.footer__address {
+  background: left top no-repeat url("../../img/union.svg");
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.footer__phone {
+  background: left top no-repeat url("../../img/phone.svg");
 }
 
 @media (min-width: $tablet-size) {

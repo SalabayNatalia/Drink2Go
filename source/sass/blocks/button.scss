@@ -11,3 +11,16 @@
   cursor: pointer;
   // display: block;
 }
+
+.button:hover,
+.button:focus {
+  background-color: $primary-lighter;
+}
+
+.button:active {
+  background-color: $primary-darker;
+}
+
+.button:disabled {
+  background-color: $base-grey;
+}
