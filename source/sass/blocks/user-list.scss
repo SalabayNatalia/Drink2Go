@@ -1,7 +1,6 @@
 .user-list {
   @include list-reset;
   display: flex;
-  // align-items: center;
 
   &__item {
     font-size: 12px;
@@ -30,7 +29,6 @@
 
   &__icon {
     stroke: currentColor;
-    fill-rule: $base-primary;
   }
 
   &__text {

@@ -4,6 +4,69 @@
     display: flex;
     flex-direction: column;
   }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item::before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  &__item-name {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__item-description {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .advantages {
+    &__item-name {
+      font-size: 24px;
+      line-height: 36px;
+      text-align: start;
+    }
+
+    &__item-description {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: start;
+    }
+
+    &__item::before {
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .advantages {
+    &__item-name {
+      text-align: center;
+    }
+
+    &__item-description {
+      text-align: center;
+    }
+
+    &__item::before {
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .advantages__item--cheerfulness::before {
@@ -14,18 +77,18 @@
 
 .advantages__item--convenience::before {
   @include advantages-item-before;
-  width: 38px;
+  width: 52px;
   background-image: url("../../img/convenience.png");
 }
 
 .advantages__item--speed::before {
   @include advantages-item-before;
-  width: 46px;
+  width: 50px;
   background-image: url("../../img/speed.png");
 }
 
 .advantages__item--eco::before {
   @include advantages-item-before;
-  width: 42px;
+  width: 46px;
   background-image: url("../../img/eco.png");
 }

@@ -7,10 +7,7 @@
 @mixin advantages-item-before {
   content: "";
   position: absolute;
-  height: 52px;
+  height: 56px;
   background-repeat: no-repeat;
-  // left: 0;
-  // top: 50%;
-  // transform: translateY(-50%);
   background-position: center;
 }

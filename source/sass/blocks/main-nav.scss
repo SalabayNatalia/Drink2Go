@@ -76,14 +76,14 @@
   .main-nav__toggle--closed {
     position: relative;
     margin-left: auto;
-    // margin-bottom: 51px;
     background-color: transparent;
     border: none;
+    display: none;
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -56px;
       left: 250px;
       width: 12px;
       height: 2px;
@@ -94,7 +94,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 0;
+      top: -56px;
       left: 250px;
       width: 12px;
       height: 2px;
