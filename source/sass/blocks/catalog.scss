@@ -28,6 +28,10 @@
     width: 280px;
   }
 
+  &__product:hover {
+    box-shadow: 0 5px 15px 5px $base-grey
+  }
+
   &__product:not(:last-child) {
     margin-bottom: 20px;
   }

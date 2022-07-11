@@ -1,6 +1,10 @@
 .copyright {
+  border-top: 1px solid $base-secondary;
+  padding-top: 20px;
+
   &__link-logo {
     fill: $base-grey;
+    padding-top: 20px;
   }
 
   &__link-logo:hover {
@@ -12,6 +16,7 @@
     font-size: 12px;
     line-height: 16px;
     font-weight: 400;
+    padding-top: 20px;
   }
 
   &__link-text:hover,
@@ -21,5 +26,11 @@
 
   &__link-text:active {
     color: $primary-darker;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .copyright {
+    border: none;
   }
 }

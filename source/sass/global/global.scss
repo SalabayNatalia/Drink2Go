@@ -6,6 +6,9 @@ body {
   font-size: 14px;
   line-height: 18px;
   background-color: $base-white;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  overflow-x: hidden;
 }
 
 *,

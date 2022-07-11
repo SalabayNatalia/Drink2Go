@@ -1,5 +1,6 @@
 .slider {
   padding: 20px 0;
+  overflow: hidden;
 
   &__item-wrapper {
     display: flex;
@@ -12,6 +13,11 @@
 
   &__item {
     text-align: center;
+    display: none;
+  }
+
+  &__item--current {
+    display:block;
   }
 
   &__item--first {
