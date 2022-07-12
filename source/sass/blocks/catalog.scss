@@ -2,6 +2,56 @@
   background-color: $lightest-grey;
   padding-top: 50px;
 
+  &__sorting-products-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr min-content;
+  }
+
+  &__sorting {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-column: 2/-2;
+    grid-row: 1/2;
+  }
+
+  &__sorting-item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: $base-primary;
+    display: none;
+  }
+
+  &__sorting-item--current {
+    display: block;
+  }
+
+  &__sorting-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  &__sorting-button {
+    grid-column: 3/-1;
+    background: center center no-repeat url("../../img/arrow.svg") $base-white;
+    transform: rotate(90deg);
+    border: none;
+    background-color: transparent;
+    width: 10px;
+    height: 6px;
+    padding: 24px 13px 0 15px;
+    width: 10px;
+    height: 6px;
+    margin-bottom: 0;
+  }
+
   &__wrapper {
     display: grid;
   }
@@ -13,13 +63,18 @@
     background-repeat: no-repeat;
     background-position: 20px 10px;
     background-size: 20px 16px;
-    padding: 8px 20px 8px 46px;
+    padding: 9px 18px 8px 45px;
+    border: none;
+    margin-right: -19px;
+    letter-spacing: 0.1em;
   }
 
   &__products {
     @include list-reset;
     display: flex;
     flex-direction: column;
+    grid-column: 1/-1;
+    margin-bottom: 40px;
   }
 
   &__product {
@@ -34,16 +89,32 @@
   }
 
   &__product:not(:last-child) {
+    margin-bottom: 19px;
+  }
+
+  &__title-product {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 700;
+    color: $base-black;
+    margin-bottom: 6px;
+  }
+
+  &__description {
     margin-bottom: 20px;
+    margin-top: 0;
+    padding-right: 2px;
   }
 
   &__link-image {
     text-align: center;
     display: block;
+    margin-bottom: 24px;
   }
 
   &__image {
     display: block;
+    margin: auto;
   }
 
   &__price {

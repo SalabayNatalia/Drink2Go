@@ -1,6 +1,14 @@
 .copyright {
   border-top: 1px solid $base-secondary;
-  padding-top: 20px;
+  padding-top: 18px;
+
+  &__layout {
+    text-align: center;
+  }
+
+  &__logo {
+    vertical-align: middle;
+  }
 
   &__link-logo {
     fill: $base-grey;

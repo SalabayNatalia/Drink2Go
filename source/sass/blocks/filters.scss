@@ -3,12 +3,15 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    letter-spacing: 0.06em;
     color: $base-primary;
-    padding: 8px 0;
+    padding: 6px 0;
     width: 100%;
     background-color: $base-white;
     border-radius: 4px;
     border-color: transparent;
+    margin-bottom: 39px;
+    margin-top: 7px;
   }
 
   &__button:hover,
@@ -29,6 +32,7 @@
 
   &__list {
     @include list-reset;
+    margin-bottom: 24px;
   }
 
   &__filter {
@@ -41,58 +45,52 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
+    padding-bottom: 20px;
   }
 
 
   &__range-controls {
 	position: relative;
 	height: 41px;
-	margin-bottom: 13px;
+	margin-bottom: 5px;
 	background-color: $lightest-grey;
 	border-radius: 5px;
-	// padding-right: 20px;
-	// padding-left: 20px;
-	padding-top: 31px;
-}
+	padding-top: 11px;
+  }
 
   &__scale {
 	height: 2px;
 	background-color: $primary-lighter;
-}
+  }
 
   &__bar {
 	width: 70%;
 	height: 2px;
 	background-color: $primary-lighter;
-}
+  }
 
   &__toggle {
-	position: absolute;
-	top: 20px;
-	width: 24px;
-	height: 24px;
-	padding: 0;
-	border: 2px solid $primary-lighter;
-	background-color: $base-white;
-	border-radius: 50%;
-	cursor: pointer;
-}
+    @include toggler-radio;
+    top: 0;
+  }
 
   &__toggle--min {
-	left: 0;
-}
+	  left: 0;
+  }
 
   &__toggle--max {
-	left: 236px;
-}
+	  left: 236px;
+  }
 
-  &__toggle:hover {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    border: 3px solid $base-white;
+  &__toggle:hover,
+  &__toggle:focus {
+    @include toggler-radio-status;
     background-color: $base-grey;
-    box-shadow: 0 0 1px 2px $base-primary;
+  }
+
+  &__toggle:active {
+    @include toggler-radio-status;
+    background-color: $base-primary;
   }
 
   &__label {
@@ -101,17 +99,38 @@
     font-weight: 400;
   }
 
+  &__label--radio {
+    padding-left: 33px;
+  }
+
+  &__label--check {
+    padding-left: 53px;
+  }
+
   &__price-input {
     border-color: $primary-lighter;
     border-radius: 4px;
-    padding: 8px 10px;
+    padding: 6px 10px;
     color: $base-black;
     max-width: 125px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  &__price-input--min {
+    margin-right: 29px;
   }
 
   &__price-controls {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 23px;
+  }
+
+  &__radio-item:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   &__radio-input,
@@ -124,45 +143,37 @@
   }
 
   &__radio {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    box-shadow: 0 0 0 2px $base-grey;
-    border-radius: 50%;
-    background-color: $base-white;
+    @include toggler-radio;
+    margin-left: -33px;
   }
 
   &__radio-input:checked + &__radio {
-    background-image: url("../../img/radio.svg");
-    box-shadow: 0 0 0 2px $base-primary;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include toggler-radio-status;
+    background-color: $base-primary;
   }
 
-  // &__input-radio:checked:hover + &__radio {
-  //   box-shadow: 0 0 0 1px $grey-style;
-  // }
-
-  &__radio-input:hover + &__radio,
-  &__radio-input:focus + &__radio {
-    box-shadow: 0 0 0 2px $base-primary;
+  &__radio-input:active + &__radio:active {
+    background-color: $base-primary;
   }
 
-  &__radio-input:checked:hover + &__radio,
-  &__radio-input:checked:focus + &__radio {
-    // box-shadow: 0 0 0 2px $base-primary;
-    opacity: 0.3;
-    // background: rgba(0, 0, 0, 0.3);
+  &__radio-input:hover:not([disabled]) + &__radio,
+  &__radio-input:focus:not([disabled]) + &__radio {
+    @include toggler-radio-status;
+    background-color: $base-grey;
   }
 
-  &__radio-input:checked:disabled + &__radio {
-    opacity: 0.3;
+  &__radio-input:checked:hover:not([disabled]) + &__radio,
+  &__radio-input:checked:focus:not([disabled]) + &__radio {
+    background-color: $base-grey;
   }
 
+  &__radio-input:checked:disabled + &__radio
   &__radio-input:disabled + &__radio {
-    box-shadow: 0 0 0 2px $light-grey;
-    background-color: transparent;
-    color: $base-grey;
+    opacity: 0.3;
+  }
+
+  &__check-item:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   &__check-box {
@@ -175,6 +186,7 @@
     background-image: url("../../img/check.svg");
     background-repeat: no-repeat;
     background-position: left;
+    margin-left: -53px;
   }
 
   &__input:checked + &__check-box {
@@ -183,20 +195,15 @@
     background-position: right;
   }
 
-  &__input:hover + &__check-box,
-  &__input:focus + &__check-box {
+  &__input:hover:not([disabled]) + &__check-box,
+  &__input:focus:not([disabled]) + &__check-box {
     box-shadow: 0 0 0 2px $base-primary;
-    background: rgba(120, 89, 207, 0.25);
+    background: $base-grey;
   }
 
-  &__input:checked:disabled + &__check-box {
-    opacity: 0.3;
-  }
-
+  &__input:checked:disabled + &__check-box,
   &__input:disabled + &__check-box {
-    box-shadow: 0 0 0 2px $light-grey;
-    background-color: transparent;
-    color: $base-grey;
+    opacity: 0.3;
   }
 }
 
@@ -318,4 +325,3 @@
 // 	display: grid;
 // 	grid-template-columns: 1fr 1fr;
 // 	column-gap: 23px;
-
