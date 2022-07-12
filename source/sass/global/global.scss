@@ -8,13 +8,13 @@ body {
   background-color: $base-white;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  overflow-x: hidden;
 }
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+  // outline: 2px solid brown;
 }
 
 a {

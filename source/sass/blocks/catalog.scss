@@ -1,5 +1,6 @@
 .catalog {
   background-color: $lightest-grey;
+  padding-top: 50px;
 
   &__wrapper {
     display: grid;
@@ -29,7 +30,7 @@
   }
 
   &__product:hover {
-    box-shadow: 0 5px 15px 5px $base-grey
+    box-shadow: 5px 5px 5px 0 $base-grey
   }
 
   &__product:not(:last-child) {
@@ -38,6 +39,10 @@
 
   &__link-image {
     text-align: center;
+    display: block;
+  }
+
+  &__image {
     display: block;
   }
 

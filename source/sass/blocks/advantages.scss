@@ -1,17 +1,24 @@
 .advantages {
+  padding-bottom: 59px;
+
   &__list {
     @include list-reset;
     display: flex;
     flex-direction: column;
+    padding-top: 81px;
   }
 
   &__item {
     position: relative;
   }
 
+  &__item:not(:last-child) {
+    margin-bottom: 97px;
+  }
+
   &__item::before {
     left: 50%;
-    top: 0;
+    top: -66px;
     transform: translateX(-50%);
   }
 
@@ -20,6 +27,8 @@
     line-height: 32px;
     font-weight: 700;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
   }
 
   &__item-description {
@@ -27,6 +36,8 @@
     line-height: 20px;
     font-weight: 400;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 

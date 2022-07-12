@@ -1,24 +1,23 @@
 .footer {
   padding-bottom: 30px;
 
+  &__logo {
+    display: block;
+  }
+
   &__nav-box {
     border-top: 1px solid $base-secondary;
     padding-top: 20px;
-    // margin-left: -20px;
-    // padding-left: 20px;
-    // margin-right: -20px;
-    margin-left: -250px;
-    padding-left: 250px;
-    margin-right: -250px;
+    margin: 0 -20px;
   }
 
   &__title {
     font-size: 14px;
     line-height: 20px;
     font-weight: 700;
-    letter-spacing: 0.2em;
     color: $base-primary;
     margin-bottom: 20px;
+    padding: 0 40px;
   }
 
   &__header {
@@ -27,6 +26,7 @@
 
   &__list {
     @include list-reset;
+    padding: 0 20px;
   }
 
   &__item-link {

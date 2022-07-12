@@ -1,5 +1,6 @@
 .main-nav {
   width: 100%;
+  display: none;
 
   &__list {
     @include list-reset;
@@ -15,10 +16,6 @@
     text-transform: uppercase;
     text-align: center;
     border-top: 1px solid $base-secondary;
-    // padding-top: 20px;
-    // margin: 0 -160px;
-    // padding-right: 135px;
-    // padding-left: 135px;
     padding-right: 240px;
     padding-left: 240px;
   }
@@ -28,9 +25,6 @@
     display: block;
     color: $base-black;
     padding: 20px 130px;
-    // border-top: 1px solid $base-secondary;
-    // width: 100%;
-    // margin: 0 -20px;
   }
 
   &__link:hover,
@@ -43,7 +37,7 @@
     color: $base-black
   }
 
-  .main-nav__toggle--open {
+  .main-nav__toggle--opened {
     position: relative;
     align-self: center;
     justify-self: end;
@@ -80,25 +74,16 @@
     border: none;
     display: none;
 
+    &::before,
+    &::after {
+      @include main-nav-toggle;
+    }
+
     &::before {
-      content: "";
-      position: absolute;
-      top: -56px;
-      left: 250px;
-      width: 12px;
-      height: 2px;
-      background-color: $base-black;
       transform: rotate(45deg);
     }
 
     &::after {
-      content: "";
-      position: absolute;
-      top: -56px;
-      left: 250px;
-      width: 12px;
-      height: 2px;
-      background-color: $base-black;
       transform: rotate(-45deg);
     }
   }

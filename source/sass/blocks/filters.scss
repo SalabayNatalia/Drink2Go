@@ -33,6 +33,8 @@
 
   &__filter {
     border:none;
+    padding: 0;
+    margin: 0;
   }
 
   &__name {
@@ -41,10 +43,75 @@
     font-weight: 600;
   }
 
+
+  &__range-controls {
+	position: relative;
+	height: 41px;
+	margin-bottom: 13px;
+	background-color: $lightest-grey;
+	border-radius: 5px;
+	// padding-right: 20px;
+	// padding-left: 20px;
+	padding-top: 31px;
+}
+
+  &__scale {
+	height: 2px;
+	background-color: $primary-lighter;
+}
+
+  &__bar {
+	width: 70%;
+	height: 2px;
+	background-color: $primary-lighter;
+}
+
+  &__toggle {
+	position: absolute;
+	top: 20px;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border: 2px solid $primary-lighter;
+	background-color: $base-white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+  &__toggle--min {
+	left: 0;
+}
+
+  &__toggle--max {
+	left: 236px;
+}
+
+  &__toggle:hover {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 3px solid $base-white;
+    background-color: $base-grey;
+    box-shadow: 0 0 1px 2px $base-primary;
+  }
+
   &__label {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+  }
+
+  &__price-input {
+    border-color: $primary-lighter;
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: $base-black;
+    max-width: 125px;
+  }
+
+  &__price-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   &__radio-input,

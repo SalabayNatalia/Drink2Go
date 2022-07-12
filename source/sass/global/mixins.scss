@@ -11,3 +11,13 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@mixin main-nav-toggle {
+  content: "";
+  position: absolute;
+  top: -26px;
+  left: 263px;
+  width: 14px;
+  height: 2px;
+  background-color: $base-black;
+}

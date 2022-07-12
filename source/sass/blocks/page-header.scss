@@ -12,11 +12,12 @@
   &__main-nav {
     grid-column: 1 / -1;
     grid-row: 2/-1;
+    margin-top: -18px;
   }
 
   &__logo-link {
-    padding: 20px;
-    margin-right: 55px;
+    padding: 12px 0;
+    margin-right: 88px;
   }
 
   &__logo-link:hover,
@@ -26,6 +27,10 @@
 
   &__logo-link:active {
     opacity: 0.2;
+  }
+
+  &__logo {
+    display: block;
   }
 
   &__header {

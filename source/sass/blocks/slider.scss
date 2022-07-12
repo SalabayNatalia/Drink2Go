@@ -1,6 +1,7 @@
 .slider {
-  padding: 20px 0;
+  padding: 0 0 20px;
   overflow: hidden;
+  margin-bottom: 29px;
 
   &__item-wrapper {
     display: flex;
@@ -37,6 +38,7 @@
     line-height: 48px;
     font-weight: 700;
     text-align: center;
+    margin-bottom: -5px;
   }
 
   &__slide-text {
@@ -44,22 +46,36 @@
     line-height: 20px;
     font-weight: 400;
     text-align: center;
+    margin-bottom: 21px;
   }
 
   &__slide-image {
     max-width: 100%;
-    min-width: 320px;
+    min-width: 280px;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 100%;
   }
 
-  // &__slider-controls {
+  &__slider-controls {
+    display: none;
+  }
 
   &__button-arrow {
     height: 100%;
     width: 20px;
     background-color: transparent;
     border-color: transparent;
+    color: $base-primary;
+    border-width: 1px;
+    top: 88px;
   }
 }
+
+// .swiper-wrapper {
+//   transform: translate3d(-770px,0,0);
+// }
 
   @media (min-width: $tablet-size) {
   .slider {
@@ -85,6 +101,10 @@
 
     &__button-arrow {
       width: 80px;
+    }
+
+    &__slider-controls {
+      display: block;
     }
   }
 }
