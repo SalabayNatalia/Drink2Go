@@ -73,10 +73,6 @@
   }
 }
 
-// .swiper-wrapper {
-//   transform: translate3d(-770px,0,0);
-// }
-
   @media (min-width: $tablet-size) {
   .slider {
 
@@ -84,9 +80,25 @@
       flex-direction: column-reverse;
     }
 
+    &__item {
+      padding-top: 60px;
+    }
+
+    &__item--first {
+      background: linear-gradient(to bottom, $slide-first, $base-white);
+    }
+
+    &__item--second {
+      background: linear-gradient(to bottom, $slide-second, $base-white);
+    }
+
+    &__item--third {
+      background: linear-gradient(to bottom, $slide-third, $base-white);
+    }
+
     &__slide-image {
       width: 476px;
-      height: 476px;
+      margin: auto;
     }
 
     &__slide-title {
@@ -97,14 +109,12 @@
     &__slide-text {
       font-size: 20px;
       line-height: 32px;
+      padding-left: 76px;
+      padding-right: 58px;
     }
 
     &__button-arrow {
       width: 80px;
-    }
-
-    &__slider-controls {
-      display: block;
     }
   }
 }
@@ -113,11 +123,20 @@
   .slider {
 
     &__item-wrapper {
-      // display: flex;
-      // flex-direction: row;
-      // justify-content: space-between;
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+
+    &__item--first {
+      background-color: $slide-first;
+    }
+
+    &__item--second {
+      background-color: $slide-second;
+    }
+
+    &__item--third {
+      background-color: $slide-third;
     }
 
     &__wrapper-info {
@@ -137,95 +156,9 @@
       width: 600px;
       height: 600px;
     }
+
+    &__slider-controls {
+      display: block;
+    }
   }
 }
-
-// .slider {
-// 	position: relative;
-// 	padding-left: 20px;
-// 	padding-right: 20px;
-// }
-
-// .slider-list {
-// 	position: relative;
-// }
-
-// .slide-three-phones::after {
-// 	background-image: url(../img/slide-three-phones.png);
-// }
-
-// .slide::after {
-// 	content: "";
-// 	position: absolute;
-// 	width: 760px;
-// 	height: 431px;
-// 	right: 4px;
-// 	bottom: 0;
-// 	background-repeat: no-repeat;
-// }
-
-// .slide-two-screens::after {
-// 	background: url(../img/slide-two-screens.png);
-// }
-
-// .slide-tablet-phone::after {
-// 	background: url(../img/slide-tablet-phone.png);
-// }
-
-// .slogan {
-// 	font-weight: 500;
-// 	font-size: 55px;
-// 	line-height: 55px;
-// 	color: var(--black);
-// 	margin: 0;
-// 	margin-bottom: 27px;
-// 	padding-top: 74px;
-// }
-
-// .text {
-// 	color: var(--dark-grey);
-// }
-
-// .text-slogan {
-// 	padding: 0;
-// 	margin: 0;
-// 	margin-bottom: 38px;
-// }
-
-// .slide-button {
-// 	margin-bottom: 80px;
-// }
-
-// .slider-controls {
-// 	position: absolute;
-// 	display: flex;
-// 	justify-content: space-between;
-// 	width: 88px;
-// 	z-index: 2;
-// 	left: 50%;
-// 	transform: translateX(-50%);
-// 	bottom: 96px;
-// }
-
-// .slider-controls-button {
-// 	width: 18px;
-// 	height: 18px;
-// 	border-radius: 50%;
-// 	padding: 0;
-// 	background-color: var(--white);
-// 	border: none;
-// 	cursor: pointer;
-// }
-
-// .current {
-// 	background-color: var(--white);
-// 	box-shadow: inset 0 0 0 5px var(--white), inset 0 0 0 7px var(--button-slide-grey);
-// }
-
-// .slide {
-// 	display: none;
-// }
-
-// .slide-current {
-// 	display: block;
-// }

@@ -209,119 +209,19 @@
 
 @media (min-width: $tablet-size) {
   .filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr min-content;
+
     &__button {
       width: auto;
       padding-left: 39px;
       padding-right: 39px;
       text-align: center;
     }
+
+    &__price-input {
+      max-width: 96px;
+    }
   }
 }
-
-
-// .page-catalog .sorting-sites {
-// 	text-transform: uppercase;
-// 	line-height: 18px;
-// 	grid-column-start: 2;
-// 	grid-column-end: -1;
-// 	grid-row-start: 1;
-// 	grid-row-end: 2;
-// 	margin-bottom: 48px;
-// }
-
-// .sorting-sites {
-// 	display: grid;
-// 	grid-template-columns: 1fr 1fr;
-// }
-
-// .filter-sorting {
-// 	margin: 0;
-// 	margin-right: 200px;
-// }
-
-// .sorting-flex {
-// 	display: flex;
-// 	padding-top: 5px;
-// 	margin-right: 20px;
-// }
-
-// .sorting-list {
-// 	display: flex;
-// 	padding-left: 10px;
-// 	flex-wrap: wrap;
-// }
-
-// .sorting {
-// 	color: var(--black);
-// 	opacity: 0.3;
-// 	font-size: 14px;
-// }
-
-// .sorting-here {
-// 	opacity: 1;
-// }
-
-// .sorting-item:not(:last-child) {
-// 	margin-right: 26px;
-// }
-
-// .sorting:hover {
-// 	opacity: 0.6;
-// }
-
-// .sorting:active {
-// 	opacity: 1;
-// }
-
-// .arrows {
-// 	position: relative;
-// 	margin-left: 78px;
-// }
-
-// .arrow-up {
-// 	opacity: 0.3;
-// }
-
-// .arrow:hover {
-// 	opacity: 1;
-// }
-
-// .arrow-down {
-// 	width: 0;
-// 	height: 0;
-// 	border-left: 5px solid transparent;
-// 	border-right: 5px solid transparent;
-// 	border-top: 6px solid var(--grey-arrows);
-// }
-
-// .arrow-down:active {
-// 	border-top-color:  var(--grey-arrows-active);
-// }
-
-// .arrow-here {
-// 	border-top: 10px solid var(--grey-arrows-active);
-// }
-
-// .arrow-up {
-// 	width: 0;
-// 	height: 0;
-// 	border-left: 5px solid transparent;
-// 	border-right: 5px solid transparent;
-// 	border-bottom: 10px solid var(--grey-arrows);
-// 	left: 0;
-// }
-
-// .arrow-up:active {
-// 	border-bottom-color:  var(--grey-arrows-active);
-// }
-
-// .arrow {
-// 	position: absolute;
-// 	right: 20px;
-// 	top: 5px;
-// }
-
-// .product-cards {
-// 	display: grid;
-// 	grid-template-columns: 1fr 1fr;
-// 	column-gap: 23px;

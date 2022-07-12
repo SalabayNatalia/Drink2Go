@@ -43,8 +43,7 @@
 
     &__layout {
       display: flex;
-      justify-content: space-between;
-      // align-items: center;
+      justify-content: flex-start;
     }
 
     &__logo {
@@ -54,6 +53,8 @@
 
     &__logo-link {
       margin-right: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 }

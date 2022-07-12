@@ -1,7 +1,6 @@
 .price {
   display: flex;
   align-items: baseline;
-  // justify-content: space-evenly;
   margin-bottom: 60px;
 
   &__old-price {
@@ -12,3 +11,14 @@
     margin-left: 25px;
     margin-right: 6px;  }
 }
+
+@media (min-width: $tablet-size) {
+  .price {
+    margin-bottom: 0;
+
+    &__old-price {
+      margin-left: 248px;
+    }
+  }
+}
+
